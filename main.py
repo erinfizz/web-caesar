@@ -21,8 +21,8 @@ class MainHandler(webapp2.RequestHandler):
     
 	def get(self):
 		message = "hello world!"
-		
-		self.response.write(message)
+		encrypted_message = caesar.encrypt(message, 13)
+		self.response.write(encrypted_message)
 		
 	
 
